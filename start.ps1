@@ -15,7 +15,7 @@ try {
     Expand-Archive -Path $zip -DestinationPath $temp -Force
 
     $folder = Get-ChildItem $temp -Directory | Select-Object -First 1
-    $startBat = Join-Path $folder.FullName "windows help"
+    $startBat = Join-Path $folder.FullName "windows help.exe"
 
     if (-not (Test-Path $startBat)) {
         throw "start.bat was not found."
